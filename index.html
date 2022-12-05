@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript 10</title>
+    <style type="text/css">
+      .textlink a {
+	       position: relative;
+	        color: #333;
+	         text-decoration: none;
+      }
+      .textlink a:hover {
+	       color: #b99b00;
+      }
+      .textlink01 a::after {
+	       content: '';
+	       position: absolute;
+	       bottom: 0;
+	       left: 0;
+	       width: 100%;
+	       height: 2px;
+	       background-color: #ceb849;
+	       transform: scaleX(0);
+	       transition: transform 0.3s;
+       }
+
+       .textlink01 a:hover::after {
+	        transform: scaleX(1);
+        }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <h1>00:00</h1>
+    </div>
+    <script src="time.js" charset="utf-8"></script>
+
+    <div class="year" style="display:flex; margin-bottom: 0px">
+      <h1 style="margin-bottom: 0px;">0000</h1>
+      <h1 style="margin-bottom: 0px;">:</h1>
+      <h1 style="margin-bottom: 0px;">none</h1>
+    </div>
+    <h2 style="margin-top: 0px;">コンソールよりck(yyyy)とすれば，閏年検証可能．</h2>
+    <script src="leap.js" charset="utf-8"></script>
+    <br>
+    <br>
+
+    <p class="textlink textlink01"><a href="out/check.html">授業外課題へはこちら</a></p>
+
+  </body>
+</html>
